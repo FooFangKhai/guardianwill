@@ -2,7 +2,6 @@
 
 GuardianWill is a modern, professional web application designed to simplify estate planning for families. Our platform allows users to draft essential legal documents like Wills and Estate Administration plans with ease, security, and affordability.
 
-![GuardianWill Homepage](file:///Users/_fangkhai/.gemini/antigravity/brain/a6000ed9-03ee-49af-a612-5d06b909e242/guardianwill_homepage_1773157041034.png)
 
 ## 🛡️ Key Features
 
@@ -67,4 +66,4 @@ GuardianWill is a modern, professional web application designed to simplify esta
 GuardianWill is driven by a single goal: to remove the friction from securing your family's future. We believe that professional legal protection should be as accessible and intuitive as ordering online.
 
 ---
-*Securing Your Legacy.*
+
