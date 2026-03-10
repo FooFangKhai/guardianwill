@@ -1,0 +1,98 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Solutions — GuardianWill{% endblock %}
+{% block meta_desc %}Discover GuardianWill's comprehensive solutions — Digital Will Drafting, Consultant Support,
+and Estate Settlement.{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>Our Solutions</h1>
+    <p>Expert legal frameworks designed specifically to protect your assets and loved ones.</p>
+</div>
+
+<div style="padding: 70px 0; background-color: var(--blue-bg-light);">
+    <div class="modern-services-grid">
+
+        <!-- Online Will Writing -->
+        <div class="modern-service-card reveal" id="will-writing">
+            <span class="service-tag" style="align-self: flex-start;">Solution 01</span>
+            <div class="modern-service-icon" style="background: linear-gradient(135deg, var(--blue-bg), #d0e7ff);">
+                📄
+            </div>
+            <h2>Digital Will Drafting</h2>
+            <p>Our intuitive online platform navigates you safely through the complexities of formulating a fully compliant testament — entirely from your own home.</p>
+            <p>Each document is rigorously reviewed and approved by certified legal experts.</p>
+            <ul class="modern-service-features">
+                <li>Interactive digital workflow</li>
+                <li>Expert legal validation</li>
+                <li>Physical copy shipped directly</li>
+                <li>Fully recognized by state law</li>
+                <li>Flexible appointments for guardians</li>
+            </ul>
+            <div class="modern-service-actions">
+                <a href="{% url 'packages' %}" class="btn-primary-full">Select a Package ➔</a>
+                <a href="https://wa.me/60125363011?text=Hi%2C%20I%20have%20questions%20about%20Digital%20Will%20Drafting." target="_blank" class="btn-whatsapp-full">
+                    <span>💬</span> Chat via WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- Will Advisor -->
+        <div class="modern-service-card reveal" id="will-advisor" style="transition-delay: 0.1s;">
+            <span class="service-tag" style="align-self: flex-start;">Solution 02</span>
+            <div class="modern-service-icon" style="background: linear-gradient(135deg, var(--green-bg), #d4edda);">
+                🤝
+            </div>
+            <h2>GuardianWill Consultants</h2>
+            <p>Our accredited consultants stand ready to facilitate your journey. Support navigating asset structures and selecting the optimal tier.</p>
+            <p>Expand your career by joining our network to secure legacies.</p>
+            <ul class="modern-service-features">
+                <li>Dedicated personal guidance</li>
+                <li>Accredited and knowledgeable experts</li>
+                <li>Accessible virtually or face-to-face</li>
+                <li>Extensive regional service</li>
+                <li>Career opportunities as a Consultant</li>
+            </ul>
+            <div class="modern-service-actions">
+                <a href="https://wa.me/60125363011?text=Hi%2C%20I%20am%20interested%20in%20speaking%20with%20a%20GuardianWill%20Consultant." target="_blank" class="btn-whatsapp-full">
+                    <span>💬</span> Chat with a Consultant
+                </a>
+            </div>
+        </div>
+
+        <!-- Estate Admin -->
+        <div class="modern-service-card reveal" id="estate-admin" style="transition-delay: 0.2s;">
+            <span class="service-tag" style="align-self: flex-start;">Solution 03</span>
+            <div class="modern-service-icon" style="background: linear-gradient(135deg, #fff3cd, #fff3cd);">
+                🏛️
+            </div>
+            <h2>Estate Settlement</h2>
+            <p>Navigating inheritance can be daunting. We supply end-to-end estate settlement assistance to ensure all funds are promptly allocated.</p>
+            <p>We manage all statutory filings, probate petitions, and liability resolution.</p>
+            <ul class="modern-service-features">
+                <li>Probate petition processing</li>
+                <li>Asset tracking and consolidation</li>
+                <li>Liability and tax clearance</li>
+                <li>Heir wealth transfer</li>
+                <li>Complete procedural guidance</li>
+            </ul>
+            <div class="modern-service-actions">
+                <a href="https://wa.me/60125363011?text=Hi%2C%20I%20need%20assistance%20with%20Estate%20Settlement." target="_blank" class="btn-whatsapp-full">
+                    <span>💬</span> Inquire via WhatsApp
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <h2>Looking to safeguard your dependents?</h2>
+    <p>Initiate your legacy planning now. Select the tier that perfectly aligns with your requirements.</p>
+    <a href="{% url 'packages' %}" class="btn-cta-white">Explore Tiers</a>
+</section>
+
+{% endblock %}

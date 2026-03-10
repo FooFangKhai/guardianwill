@@ -1,0 +1,104 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Connect With Us — GuardianWill{% endblock %}
+{% block meta_desc %}Reach out to GuardianWill. We are committed to supporting your estate planning journey.{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>Connect With Us</h1>
+    <p>We welcome your inquiries. Our dedicated support staff is on standby to assist.</p>
+</div>
+
+{% if messages %}
+<div class="messages-container">
+    {% for message in messages %}
+    <div class="message {{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<section class="contact-section">
+    <div class="contact-layout">
+
+        <div class="contact-info">
+            <h2>Start a Conversation</h2>
+            <p>Do you require clarification regarding our tiers, processes, or an existing document? Our knowledgeable consultants will navigate you through every phase.</p>
+
+            <div class="contact-details">
+                <div class="contact-item">
+                    <div class="contact-item-icon">📍</div>
+                    <div class="contact-item-text">
+                        <h4>Headquarters</h4>
+                        <p>GuardianWill Sdn Bhd, Kuala Lumpur, Malaysia</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📞</div>
+                    <div class="contact-item-text">
+                        <h4>Direct Line</h4>
+                        <p>+60 12-345 6789</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <div class="contact-item-text">
+                        <h4>General Inquiries</h4>
+                        <p>support@guardianwill.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">🕐</div>
+                    <div class="contact-item-text">
+                        <h4>Business Hours</h4>
+                        <p>Mon – Fri: 9:00 AM – 6:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">💬</div>
+                    <div class="contact-item-text">
+                        <h4>WhatsApp</h4>
+                        <p>+60 12-345 6789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-card">
+            <h3>Submit an Inquiry</h3>
+            <form method="post" action="{% url 'contact' %}">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+60 12-345 6789">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="How can we help?">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Detailed Message *</label>
+                    <textarea id="message" name="message" placeholder="Provide details regarding your request..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Dispatch Message →</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,228 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}GuardianWill — Effortless Estate Planning for Every Family{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-left">
+        <div class="hero-left-bg"></div>
+        <div class="hero-left-content">
+            <h1 class="hero-title">SIMPLE WILL,<br>SIMPLE WORK,<br>SIMPLE LIFE.</h1>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="hero-right-content">
+            <h2 class="hero-subtitle">GUARDIANWILL guides you through creating customized legal documents to protect you
+                and
+                your family.</h2>
+            <p class="hero-desc">Let's face it, life can get busy and to-do lists can seem never-ending. At
+                GUARDIANWILL, we
+                did the heavy lifting to make estate planning as painless as possible while skipping an expensive visit
+                to a lawyer. Unlock peace of mind knowing there's a plan in place for you and your family.</p>
+            <a href="{% url 'about' %}" class="btn-learn-more">Learn More →</a>
+        </div>
+        <div class="scroll-indicator"
+            style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);animation:bounce 2s infinite;">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- Milestones Slider -->
+<section class="milestones-section">
+    <div class="milestones-carousel" style="overflow:hidden;">
+        <div class="milestone-slide"
+            style="display:flex;flex-direction:column;align-items:center;padding:40px 24px;text-align:center;">
+            <h2
+                style="font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--text-dark);margin-bottom:12px;">
+                Effortless Estate Planning<br>For Everyone</h2>
+            <p style="color:var(--text-medium);font-size:15px;margin-bottom:20px;max-width:520px;">Drafting a Will
+                shouldn't be a complex, stressful ordeal. Navigate our intuitive 3-step platform or reach out to our
+                experts for assistance.</p>
+            <p
+                style="font-size:13.5px;font-weight:600;color:var(--text-light);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;">
+                Our clients trust GuardianWill during major life events, including:</p>
+            <div class="milestone-tags">
+                <span class="milestone-tag">💍 Recently Getting Married</span>
+                <span class="milestone-tag">🏠 Buying Their First Home</span>
+                <span class="milestone-tag">👶 The Birth of a Child</span>
+                <span class="milestone-tag">📜 Outdated Wills</span>
+            </div>
+            <a href="{% url 'services' %}" class="btn-write-will">Write A Will →</a>
+        </div>
+    </div>
+</section>
+
+<!-- 3-Step Process -->
+<section class="steps-section">
+    <p class="steps-intro">We simplify the journey of drafting your will into three manageable phases.</p>
+
+    <!-- Step 1 -->
+    <div class="step-row">
+        <img src="{% static 'main/images/brand/step1.png' %}" alt="Person typing on laptop" class="step-img">
+        <div class="step-content">
+            <span class="step-number-badge">Phase 1</span>
+            <h3>Select &amp; Input</h3>
+            <p>Pick the service tier that fits your needs and enter your details into our secure portal. Our intuitive
+                questionnaire translates complex legal requirements into plain, understandable language.</p>
+        </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-row reverse">
+        <img src="{% static 'main/images/brand/step2.png' %}" alt="Online payment and delivery" class="step-img">
+        <div class="step-content">
+            <span class="step-number-badge">Phase 2</span>
+            <h3>Checkout &amp; Receive</h3>
+            <p>Complete your transaction securely online. We will then print your expertly prepared document and deliver
+                the physical copy directly to your residence. There is no need for law firm visits.</p>
+        </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-row">
+        <img src="{% static 'main/images/brand/step3.png' %}" alt="Signing a document" class="step-img">
+        <div class="step-content">
+            <span class="step-number-badge">Phase 3</span>
+            <h3>Execute</h3>
+            <p>Once your physical copy arrives, simply sign it in the presence of two independent witnesses. Your
+                document is instantly binding, ensuring your loved ones are safeguarded. It really is that
+                straightforward!</p>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-subtitle">Testimonials</p>
+    <div class="testimonial-carousel-wrapper">
+        <button class="carousel-btn prev" aria-label="Previous">‹</button>
+        <div class="testimonial-carousel">
+            <div class="testimonial-track">
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"I was amazed by the seamless experience. Intuitive, fast, and
+                            highly effective. Huge thanks to GuardianWill for the outstanding support."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👤</div>
+                            <div>
+                                <div class="author-name">Sam Lai</div>
+                                <div class="author-role">Verified Client</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Having recently welcomed our first child, securing our estate was a
+                            priority. This platform enabled us to execute everything flawlessly from our living room."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👫</div>
+                            <div>
+                                <div class="author-name">Edmond and Xe Lin</div>
+                                <div class="author-role">Parents & Homeowners</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"A Last Will is undeniably critical, yet people delay it.
+                            GuardianWill removes every barrier, making the entire creation process remarkably
+                            accessible."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👤</div>
+                            <div>
+                                <div class="author-name">Chan C.C</div>
+                                <div class="author-role">Financial Consultant</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Exceptional service! The workflow was incredibly smooth and the
+                            support staff was prompt. I completed my final directives in less than half an hour."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👤</div>
+                            <div>
+                                <div class="author-name">Ahmad Rahman</div>
+                                <div class="author-role">Entrepreneur</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Expertly handled, budget-friendly, and surprisingly swift.
+                            GuardianWill delivered the assurance I was seeking. My dependents are now completely
+                            secure."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩</div>
+                            <div>
+                                <div class="author-name">Priya Menon</div>
+                                <div class="author-role">Medical Specialist</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn next" aria-label="Next">›</button>
+    </div>
+</section>
+
+<!-- Partners -->
+<section class="partners-section">
+    <h2 class="section-title">Our Partners</h2>
+    <p class="section-subtitle" style="margin-bottom:30px;">Trusted organizations we work with</p>
+    <div class="partners-grid">
+        <div class="partner-card">
+            <div class="partner-icon">💼</div>
+            <div class="partner-name">Wealth Geeks Advisory</div>
+        </div>
+        <div class="partner-card">
+            <div class="partner-icon">🍁</div>
+            <div class="partner-name">Maple Consultant Advisory</div>
+        </div>
+        <div class="partner-card">
+            <div class="partner-icon">🌿</div>
+            <div class="partner-name">Pisteuo Advisory Sdn Bhd</div>
+        </div>
+        <div class="partner-card">
+            <div class="partner-icon">📊</div>
+            <div class="partner-name">Strategy Consultancy</div>
+        </div>
+        <div class="partner-card">
+            <div class="partner-icon">✨</div>
+            <div class="partner-name">Artisan Spirit PLT</div>
+        </div>
+        <div class="partner-card">
+            <div class="partner-icon">⚖️</div>
+            <div class="partner-name">Malaysia Will and Trust Association (MWTA)</div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+    <h2>Secure your family's future today.</h2>
+    <p>Success rarely happens by accident, yet many neglect to prepare for the inevitable. Proper structuring of your
+        assets is crucial to guaranteeing tranquility and stability for those you leave behind.</p>
+    <a href="{% url 'contact' %}" class="btn-cta-white">Reach Out to Us</a>
+</section>
+
+{% endblock %}

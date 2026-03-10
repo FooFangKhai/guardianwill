@@ -1,0 +1,75 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Access Gateway — GuardianWill{% endblock %}
+{% block meta_desc %}Securely log into your GuardianWill profile as a client or consultant.{% endblock %}
+
+{% block content %}
+
+<section class="login-section">
+    <div style="width: 100%;">
+        <div class="login-card glass-card">
+            <div class="login-tabs">
+                <div class="login-tab active" data-target="customer-panel" id="tab-customer">
+                    👤 Client Access
+                </div>
+                <div class="login-tab" data-target="advisor-panel" id="tab-advisor">
+                    🏢 Consultant Access
+                </div>
+            </div>
+
+            <!-- Customer Panel -->
+            <div class="login-form-body login-form-panel" id="customer-panel">
+                <div class="hero-left-bg"></div>
+                <div class="login-icon">🔐</div>
+                <h2>Client Dashboard</h2>
+                <p>Access your GuardianWill client profile</p>
+                <form>
+                    <div class="form-group">
+                        <label for="cust-email">Registered Email</label>
+                        <input type="email" id="cust-email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-password">Security Passcode</label>
+                        <input type="password" id="cust-password" placeholder="Enter your password">
+                    </div>
+                    <div class="forgot-link" style="margin-bottom: 20px;">
+                        <a href="#">Recover passcode?</a>
+                    </div>
+                    <button type="button" class="btn-submit" onclick="alert('Client gateway activating soon!')">Sign In
+                        →</button>
+                </form>
+                <div class="login-register-link">
+                    Require a new profile? <a href="{% url 'packages' %}">Sign up here</a>
+                </div>
+            </div>
+
+            <!-- Advisor Panel -->
+            <div class="login-form-body login-form-panel" id="advisor-panel" style="display:none; opacity: 0;">
+                <div class="login-icon">🏢</div>
+                <h2>Consultant Gateway</h2>
+                <p>Access your GuardianWill consultant profile</p>
+                <form>
+                    <div class="form-group">
+                        <label for="adv-email">Registered Email</label>
+                        <input type="email" id="adv-email" placeholder="consultant@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="adv-password">Security Passcode</label>
+                        <input type="password" id="adv-password" placeholder="Enter your password">
+                    </div>
+                    <div class="forgot-link" style="margin-bottom: 20px;">
+                        <a href="#">Recover passcode?</a>
+                    </div>
+                    <button type="button" class="btn-submit" onclick="alert('Consultant gateway activating soon!')">Sign In as Consultant →</button>
+                </form>
+                <div class="login-register-link">
+                    Interested in becoming a consultant? <a href="{% url 'contact' %}">Inquire here</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

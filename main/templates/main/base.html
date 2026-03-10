@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}GuardianWill — Securing Your Legacy{% endblock %}</title>
+  <meta name="description" content="{% block meta_desc %}GuardianWill assists you in drafting personalized legal documents to safeguard you and your loved ones. Expert will writing made effortless.{% endblock %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}" />
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  Join our growing network — Become a GuardianWill Consultant. <a href="{% url 'contact' %}">Find Out How →</a>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="{% url 'home' %}" class="navbar-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C7 2 3 6.5 3 11c0 3.5 1.8 6.5 4.5 8.3V22h9v-2.7C19.2 17.5 21 14.5 21 11c0-4.5-4-9-9-9zm-1 16v-4H9l3-7 3 7h-2v4h-2z"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <div class="brand">GuardianWill</div>
+        <div class="tagline">Securing Your Legacy</div>
+      </div>
+    </a>
+
+    <div class="navbar-nav" id="mainNav">
+      <!-- Company dropdown -->
+      <div class="nav-item">
+        <a class="nav-link" data-dropdown="company" href="#">Company <span class="chevron">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="{% url 'about' %}#about-us">About Us</a>
+          <a href="{% url 'about' %}#our-partners">Our Partners</a>
+          <a href="{% url 'contact' %}">Contact Us</a>
+        </div>
+      </div>
+      <!-- Service dropdown -->
+      <div class="nav-item">
+        <a class="nav-link" data-dropdown="service" href="#">Service <span class="chevron">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="{% url 'services' %}#will-writing">Online Will Writing</a>
+          <a href="{% url 'services' %}#will-advisor">Will Advisor</a>
+          <a href="{% url 'services' %}#estate-admin">Estate Admin</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link btn-package" href="{% url 'packages' %}">Choose Package</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link {% if request.resolver_match.url_name == 'faq' %}active{% endif %}" href="{% url 'faq' %}">FAQ</a>
+      </div>
+
+      <div class="nav-divider"></div>
+
+      <div class="nav-item">
+        <a class="nav-link btn-login-customer" href="{% url 'login' %}?type=customer">Login As Customer</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link btn-login-advisor" href="{% url 'login' %}?type=advisor">Login As Advisor</a>
+      </div>
+    </div>
+
+    <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div id="navOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:999;" onclick="document.getElementById('mainNav').classList.remove('open');this.style.display='none';"></div>
+
+{% block content %}{% endblock %}
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand-name">GuardianWill</div>
+      <div class="brand-tagline">Securing Your Legacy</div>
+      <p>A digital platform formally managed by GuardianWill Sdn Bhd. We provide the tools and guidance necessary to draft essential legal documents that secure your family's future.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" title="Facebook">📘</a>
+        <a href="#" class="social-btn" title="WhatsApp">💬</a>
+        <a href="#" class="social-btn" title="Instagram">📷</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="{% url 'about' %}#about-us">About Us</a></li>
+        <li><a href="{% url 'about' %}#our-partners">Our Partners</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        <li><a href="{% url 'about' %}#panel-lawyer">Panel Lawyer</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="{% url 'services' %}#will-writing">Online Will Writing</a></li>
+        <li><a href="{% url 'services' %}#will-advisor">Will Advisor</a></li>
+        <li><a href="{% url 'services' %}#estate-admin">Estate Admin</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="{% url 'faq' %}">FAQ</a></li>
+        <li><a href="{% url 'packages' %}">Packages</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-disclaimer">
+      Disclaimer: All contents, materials, information or products provided on this website are purely for your reference purpose and do not amount to legal advice rendered.
+      You are advised to seek your own legal advice from professional solicitors before relying on any information and/or using the service on this website.
+      Your reliance or usage of the information and/or service on this website is solely at your own risk.
+    </p>
+    <p class="footer-copyright">© 2026 GUARDIANWILL SDN BHD. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scrollTopBtn" title="Back to top" style="display:none;position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:50%;background:var(--green-primary);color:white;border:none;cursor:pointer;font-size:20px;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,0.2);z-index:999;transition:all 0.3s;">↑</button>
+
+<script src="{% static 'main/js/main.js' %}"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

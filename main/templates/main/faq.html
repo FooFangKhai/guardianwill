@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}FAQ — GuardianWill{% endblock %}
+{% block meta_desc %}Common inquiries regarding testament drafting in Malaysia. Receive guidance from GuardianWill's specialists.
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>Common Inquiries</h1>
+    <p>Vital information regarding estate planning procedures in Malaysia.</p>
+</div>
+
+<section class="faq-section">
+    <div class="faq-layout">
+        <div class="faq-sidebar">
+            <h2>Need Assistance?</h2>
+            <p>Do you have concerns regarding the document drafting process? Review these frequent questions for rapid clarification.</p>
+            <div class="faq-contact-prompt">
+                <h4>Require further details?</h4>
+                <p>If your specific concern isn't addressed here, our approachable advisors are ready to assist.</p>
+                <a href="{% url 'contact' %}" class="btn-faq-contact">Reach Out</a>
+            </div>
+        </div>
+
+        <div class="faq-list">
+            {% for faq in faqs %}
+            <div class="faq-item">
+                <button class="faq-question" type="button">
+                    {{ faq.question }}
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">{{ faq.answer }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <h2>Prepared to draft your testament?</h2>
+    <p>Make the initial move to secure your dependents today. Our service is accessible, cost-effective, and fully compliant.</p>
+    <a href="{% url 'packages' %}" class="btn-cta-white">Select a Tier</a>
+</section>
+
+{% endblock %}

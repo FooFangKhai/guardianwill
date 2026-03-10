@@ -1,0 +1,203 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Tiers — GuardianWill{% endblock %}
+{% block meta_desc %}Select the ideal legacy planning tier for your needs. Accessible pricing starting at RM399, supported by qualified legal professionals.{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>GuardianWill Service Tiers</h1>
+    <p>Our competitive pricing structure ensures you receive premium legal drafting without the premium cost.</p>
+</div>
+
+<!-- Standard Packages -->
+<section class="packages-section">
+    <h2 class="packages-tier-title">Core Drafting Tiers</h2>
+    <p class="packages-tier-subtitle">Select the foundational plan to safeguard your dependents</p>
+
+    <div class="packages-grid">
+
+        <!-- Silver -->
+        <div class="package-card reveal">
+            <div class="package-price-row">
+                <span class="package-currency">RM</span>
+                <span class="package-price">399</span>
+            </div>
+            <hr class="package-divider">
+            <h3 class="package-name">Silver Package</h3>
+            <p class="package-desc">The essential entry point for self-guided testament drafting.</p>
+            <ul class="package-features">
+                <li class="feature-item"><span class="check">✓</span>Primary Executor x 2</li>
+                <li class="feature-item"><span class="check">✓</span>Secondary Executor x 1</li>
+                <li class="feature-item"><span class="check">✓</span>Guardian x 1</li>
+                <li class="feature-item"><span class="check">✓</span>5 Gifts</li>
+                <li class="feature-item"><span class="check">✓</span>50% Off for Next Will Re-Writing</li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn-package-select">Get Started</a>
+        </div>
+
+        <!-- Gold (featured) -->
+        <div class="package-card featured">
+            <div class="package-badge badge-popular">Most Popular</div>
+            <div class="package-price-row">
+                <span class="package-currency">RM</span>
+                <span class="package-price">699</span>
+            </div>
+            <hr class="package-divider">
+            <h3 class="package-name">Gold Package</h3>
+            <p class="package-desc">The preferred choice among the majority of our clients.</p>
+            <ul class="package-features">
+                <li class="feature-item"><span class="check">✓</span>Primary Executor x 2</li>
+                <li class="feature-item"><span class="check">✓</span>Secondary Executor x 2</li>
+                <li class="feature-item"><span class="check">✓</span>Guardian x 2</li>
+                <li class="feature-item"><span class="check">✓</span>10 Gifts</li>
+                <li class="feature-item"><span class="check">✓</span>50% Off for Next Will Re-Writing</li>
+                <li class="feature-item"><span class="check">✓</span>Appointment of Trustee Company as Executor (RM150)
+                </li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn-package-select">Get Started</a>
+        </div>
+
+        <!-- Platinum -->
+        <div class="package-card reveal">
+            <div class="package-badge badge-value">Most Value</div>
+            <div class="package-price-row">
+                <span class="package-currency">RM</span>
+                <span class="package-price">899</span>
+            </div>
+            <hr class="package-divider">
+            <h3 class="package-name">Platinum Package</h3>
+            <p class="package-desc">Our most expansive core tier for detailed estate allocation.</p>
+            <ul class="package-features">
+                <li class="feature-item"><span class="check">✓</span>Primary Executor x 2</li>
+                <li class="feature-item"><span class="check">✓</span>Secondary Executor x 2</li>
+                <li class="feature-item"><span class="check">✓</span>Guardian x 2</li>
+                <li class="feature-item"><span class="check">✓</span>Unlimited Gifts</li>
+                <li class="feature-item"><span class="check">✓</span>50% Off for Next Will Re-Writing</li>
+                <li class="feature-item"><span class="check">✓</span>Appointment of Trustee Company as Executor (RM150)
+                </li>
+                <li class="feature-item"><span class="check">✓</span>Free 1-Year Custody</li>
+                <li class="feature-item"><span class="check">✓</span>Free Chinese Translation</li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn-package-select">Get Started</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Premium Packages -->
+<section class="packages-section">
+    <h2 class="packages-tier-title" style="color:var(--green-dark);">Premium Packages</h2>
+    <p class="packages-tier-subtitle">For those who require comprehensive, long-term estate planning</p>
+
+    <div class="packages-grid">
+
+        <!-- VIP -->
+        <div class="package-card reveal">
+            <div class="package-price-row">
+                <span class="package-currency">RM</span>
+                <span class="package-price" style="font-size:3rem;">1,399</span>
+            </div>
+            <hr class="package-divider">
+            <h3 class="package-name">VIP Package</h3>
+            <p class="package-desc">Premium package with extended benefits.</p>
+            <ul class="package-features">
+                <li class="feature-item"><span class="check">✓</span>All Platinum features</li>
+                <li class="feature-item"><span class="check">✓</span>Lifetime Custody</li>
+                <li class="feature-item"><span class="check">✓</span>Probate Rebate</li>
+                <li class="feature-item"><span class="check">✓</span>Priority Support</li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn-package-select">Get Started</a>
+        </div>
+
+        <!-- VVIP -->
+        <div class="package-card featured">
+            <div class="package-badge badge-popular">Best Package</div>
+            <div class="package-price-row">
+                <span class="package-currency">RM</span>
+                <span class="package-price" style="font-size:3rem;">2,599</span>
+            </div>
+            <hr class="package-divider">
+            <h3 class="package-name">VVIP Package</h3>
+            <p class="package-desc">Our most comprehensive individual package.</p>
+            <ul class="package-features">
+                <li class="feature-item"><span class="check">✓</span>All VIP features</li>
+                <li class="feature-item"><span class="check">✓</span>Lifetime Custody</li>
+                <li class="feature-item"><span class="check">✓</span>Higher Probate Rebate</li>
+                <li class="feature-item"><span class="check">✓</span>Dedicated Advisor</li>
+                <li class="feature-item"><span class="check">✓</span>Annual Will Review</li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn-package-select">Get Started</a>
+        </div>
+
+        <!-- Plus -->
+        <div class="package-card reveal">
+            <div class="package-price-row">
+                <span class="package-currency">RM</span>
+                <span class="package-price" style="font-size:3rem;">3,899</span>
+            </div>
+            <hr class="package-divider">
+            <h3 class="package-name">Plus Package</h3>
+            <p class="package-desc">The ultimate estate planning experience.</p>
+            <ul class="package-features">
+                <li class="feature-item"><span class="check">✓</span>All VVIP features</li>
+                <li class="feature-item"><span class="check">✓</span>Family Package (2 wills)</li>
+                <li class="feature-item"><span class="check">✓</span>Maximum Probate Rebate</li>
+                <li class="feature-item"><span class="check">✓</span>Concierge Estate Service</li>
+                <li class="feature-item"><span class="check">✓</span>Legal Consultation Included</li>
+            </ul>
+            <a href="{% url 'contact' %}" class="btn-package-select">Get Started</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Custody Service -->
+<section class="custody-section">
+    <h2 class="section-title">Custody Service</h2>
+    <p class="section-subtitle">Secure storage for your will — peace of mind that it's always safe.</p>
+
+    <div class="custody-table-wrapper">
+        <table class="custody-table">
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Duration</th>
+                    <th class="price-col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Custody</td>
+                    <td>1 Year</td>
+                    <td class="price-col">RM 88</td>
+                </tr>
+                <tr>
+                    <td>Standard Custody</td>
+                    <td>3 Years</td>
+                    <td class="price-col">RM 228</td>
+                </tr>
+                <tr>
+                    <td>Extended Custody</td>
+                    <td>5 Years</td>
+                    <td class="price-col">RM 350</td>
+                </tr>
+                <tr>
+                    <td>Lifetime Custody</td>
+                    <td>Lifetime</td>
+                    <td class="price-col">RM 980</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+    <h2>Unsure which tier fits your situation?</h2>
+    <p>Our dedicated consultants are ready to assist you in determining the optimal solution for your family's future.</p>
+    <a href="{% url 'contact' %}" class="btn-cta-white">Connect with a Consultant</a>
+</section>
+
+{% endblock %}
