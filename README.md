@@ -59,7 +59,7 @@ GuardianWill is a modern, professional web application designed to simplify esta
    python manage.py runserver
    ```
 
-7. Access the site at `http://127.0.0.1:8000`.
+7. Access the site at `http://127.0.0.1:8000`. or https://guardianwill.onrender.com/
 
 ## 📈 Brand Philosophy
 
